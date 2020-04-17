@@ -27,6 +27,12 @@ typedef void (*callback_t)(void);
 
 typedef uint8_t Std_ReturnType;
 
+
+typedef enum {
+status_ok,
+status_nok
+}status_t;
+
 #define E_OK                            (0)
 #define E_NOT_OK                        (1)
 
