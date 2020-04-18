@@ -10,12 +10,11 @@
 #include "SCHED_CFG.h"
 
 
- extern TASK_t Task1 , Task2;
+extern TASK_t SWITCH_Task;
 
 
 
 
-const  SysTaskInfo_t ArrSysTask[] = { {&Task1,3} ,
-									  {&Task2,0}
+const  SysTaskInfo_t ArrSysTask[] = { {&SWITCH_Task,0}
 									};
 

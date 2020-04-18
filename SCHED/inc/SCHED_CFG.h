@@ -9,7 +9,7 @@
 #ifndef SCHED_CFG_H_
 #define SCHED_CFG_H_
 
-#define MAX_NO_TASK 2
+#define MAX_NO_TASK 1
 
 #define Tick_ms    5000
 
