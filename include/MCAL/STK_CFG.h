@@ -28,7 +28,7 @@
  *  ex. define TIME_ms    1000      ===> TIME =  1 Sec.
  */
 
-#define TIME_ms  5000
+#define TIME_ms  1
 
 
 /*

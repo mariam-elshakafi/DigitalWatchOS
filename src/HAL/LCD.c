@@ -96,7 +96,7 @@ GPIO_initStruct LCD_CTRLPins[3]            = {
 /*      LCD Task        */
 /************************/
 
-TASK_t LCD_Task = {LCD_Runnable, 3, 2};
+TASK_t LCD_Task = {LCD_Runnable, 2, 2};
 
 /************************/
 /*Processes Definitions */

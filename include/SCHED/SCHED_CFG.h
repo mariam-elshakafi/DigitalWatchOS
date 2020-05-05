@@ -9,13 +9,13 @@
 #ifndef SCHED_CFG_H_
 #define SCHED_CFG_H_
 
-#define MAX_NO_TASK 2
+#define MAX_NO_TASK 3
 
 #define Tick_ms    1
 
 typedef struct
  {
- 	 TASK_t *  apptask;
+ 	TASK_t *  apptask;
  	u32 FirstDelay;
  }SysTaskInfo_t;
 

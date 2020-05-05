@@ -10,14 +10,6 @@
 #define _HUART_H
 
 
-/**Standard Types defination**/
-typedef unsigned char 	uint8_t;
-typedef unsigned short 	int uint16_t;
-typedef unsigned long 	int uint32_t;
-typedef signed 	 char 	int8_t;
-typedef signed   short 	int int16_t;
-typedef signed   short 	int int32_t;
-
 /**Parity options**/
 #define  PARITY_DISABLED		0x00000000
 #define  PARITY_EVEN			0x00000400

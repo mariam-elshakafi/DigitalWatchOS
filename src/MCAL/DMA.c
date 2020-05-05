@@ -75,7 +75,7 @@ static volatile dmaCb_t Dma_callBack[DMA_NUMBER_OF_CHANNELS];
  *                  E_OK If the function was executed successfully
  *                  E_NOT_OK If the function was not executed successfully
  */
-Std_ReturnType Dma_ConfigurePrephChannel(dmaPrephCfg_t* cfg)
+Std_ReturnType DMA_ConfigurePrephChannel(dmaPrephCfg_t* cfg)
 {
     /* Disable The Channel */
     DMA->CH[cfg->channel].CCR &= DMA_CH_DIS;
@@ -91,7 +91,8 @@ Std_ReturnType Dma_ConfigurePrephChannel(dmaPrephCfg_t* cfg)
  *                  E_OK If the function was executed successfully
  *                  E_NOT_OK If the function was not executed successfully
  */
-Std_ReturnType Dma_ConfigureMem2MemChannel(dmaMem2MemCfg_t* cfg)
+
+Std_ReturnType DMA_ConfigureMem2MemChannel(dmaMem2MemCfg_t* cfg)
 {
     /* Disable The Channel */
     DMA->CH[cfg->channel].CCR &= DMA_CH_DIS;
@@ -111,7 +112,7 @@ Std_ReturnType Dma_ConfigureMem2MemChannel(dmaMem2MemCfg_t* cfg)
  *                  E_OK If the function was executed successfully
  *                  E_NOT_OK If the function was not executed successfully
  */
-extern Std_ReturnType Dma_TransferMem2MemData(uint8_t channelNumber, uint32_t src, uint32_t dest, uint16_t nBlocks)
+Std_ReturnType DMA_TransferMem2MemData(uint8_t channelNumber, uint32_t src, uint32_t dest, uint16_t nBlocks)
 {
     /* Disable The Channel */
     DMA->CH[channelNumber].CCR &= DMA_CH_DIS;
@@ -135,7 +136,8 @@ extern Std_ReturnType Dma_TransferMem2MemData(uint8_t channelNumber, uint32_t sr
  *                  E_OK If the function was executed successfully
  *                  E_NOT_OK If the function was not executed successfully
  */
-extern Std_ReturnType Dma_TransferPrephData(uint8_t channelNumber, uint32_t preph, uint32_t mem, uint16_t nBlocks)
+
+Std_ReturnType DMA_TransferPrephData(uint8_t channelNumber, uint32_t preph, uint32_t mem, uint16_t nBlocks)
 {
     /* Disable The Channel */
     DMA->CH[channelNumber].CCR &= DMA_CH_DIS;
@@ -157,7 +159,8 @@ extern Std_ReturnType Dma_TransferPrephData(uint8_t channelNumber, uint32_t prep
  *                  E_OK If the function was executed successfully
  *                  E_NOT_OK If the function was not executed successfully
  */
-extern Std_ReturnType Dma_SetCallBack(uint8_t channelNumber, dmaCb_t callBack)
+
+Std_ReturnType DMA_SetCallBack(uint8_t channelNumber, dmaCb_t callBack)
 {
     Dma_callBack[channelNumber] = callBack;
     return E_OK;

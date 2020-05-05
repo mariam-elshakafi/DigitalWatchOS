@@ -1,20 +1,22 @@
 #include "Std_Types.h"
-#include "GPIO.h"
-#include "HRCC.h"
-#include "LCD.h"
 #include "SCHED.h"
+#include "WATCH.h"
 
+/* Runnables:
+ *
+ * SWITCH_Runnable (update switch states)
+ * LCD_Runnable (perform requested LCD services)
+ * WATCH_Main_Runnable (update clock every second, display proper data on LCD)
+ *
+ * Interrupts:
+ * Receive interrupt (Calls watch control logic when full data packet is received)
+ *
+ */
 
 int main()
 {
+	WATCH_Initialization();
 	SCHED_Initialization();
 	SCHED_StartScheduler();
 	return 0;
 }
-
-/*APP:
- * Switch_Runnable (update switch states)
- * LCD_Runnable
- * Watch_Update_Runnable (++sec, ++min, ++hours)
- * Main_Runnable (read, send to lcd)
- */
